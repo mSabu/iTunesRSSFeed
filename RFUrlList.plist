@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Adventure</key>
+	<string>https://itunes.apple.com/us/rss/topfreeebooks/limit=25/genre=9004/xml</string>
+	<key>Computers</key>
+	<string>https://itunes.apple.com/us/rss/topfreeebooks/limit=25/genre=9027/xml</string>
+	<key>Business</key>
+	<string>https://itunes.apple.com/us/rss/topfreeebooks/limit=25/genre=9009/xml</string>
+	<key>Science</key>
+	<string>https://itunes.apple.com/us/rss/topfreeebooks/limit=25/genre=9019/xml</string>
+</dict>
+</plist>
