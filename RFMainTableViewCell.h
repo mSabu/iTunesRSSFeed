@@ -14,5 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *authorText;
 @property (weak, nonatomic) IBOutlet UIImageView *bookSIcon;
 @property (weak, nonatomic)  UIView *gradientView;
+@property (weak, nonatomic) IBOutlet UIView *gradientbg;
 
 @end

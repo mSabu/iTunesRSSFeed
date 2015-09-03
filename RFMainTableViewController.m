@@ -20,6 +20,10 @@
     NSDictionary *urlsFromPlist;
     __block NSMutableArray  *arrEntryData;
     int selectedRow;
+        UIImageOrientation scrollOrientation;
+        CGPoint lastPos;
+    
+
 }
 
 @end
@@ -105,6 +109,8 @@
         cell = [nib objectAtIndex:0];
     }
     if (arrEntryData != nil && arrEntryData.count > 0) {
+        [self.tableView setSeparatorStyle: UITableViewCellSeparatorStyleSingleLineEtched];
+        
         EntryData *en = [arrEntryData objectAtIndex:indexPath.row];
         cell.titleOfBook.text = [en.title substringToIndex:[en.title rangeOfString:kSeperator].location];
 
@@ -116,14 +122,10 @@
                    cell.bookSIcon.image = downloadedImage;
             });
         }];
-    }
+    }    
     return cell;
 }
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    cell.backgroundColor = [UIColor clearColor];
-    cell.backgroundView.backgroundColor = [UIColor clearColor];
-}
+
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 100;
@@ -134,7 +136,27 @@
     [self performSegueWithIdentifier:kDetailView sender:self];
 
 }
-
+- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (tableView.isDragging) {
+        UIView *myView = cell.contentView;
+        CALayer *layer = myView.layer;
+        CATransform3D rotationAndPerspectiveTransform = CATransform3DIdentity;
+        rotationAndPerspectiveTransform.m34 = 1.0 / -1000;
+        if (scrollOrientation == UIImageOrientationDown) {
+            rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, M_PI*0.5, 1.0f, 0.0f, 0.0f);
+        } else {
+            rotationAndPerspectiveTransform = CATransform3DRotate(rotationAndPerspectiveTransform, -M_PI*0.5, 1.0f, 0.0f, 0.0f);
+        }
+        layer.transform = rotationAndPerspectiveTransform;
+        [UIView animateWithDuration:0.5 animations:^{
+            layer.transform = CATransform3DIdentity;
+        }];
+    }
+}
+- (void) scrollViewDidScroll:(UIScrollView *)scrollView {
+    scrollOrientation = scrollView.contentOffset.y > lastPos.y?UIImageOrientationDown:UIImageOrientationUp;
+    lastPos = scrollView.contentOffset;
+}
 #pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     

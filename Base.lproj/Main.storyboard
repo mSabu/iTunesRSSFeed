@@ -57,22 +57,15 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDx-0o-UFf" customClass="RFGradientView">
                                 <rect key="frame" x="20" y="64" width="560" height="516"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMr-cu-nBO">
-                                        <rect key="frame" x="8" y="38" width="80" height="90"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="JbR-vn-YRn"/>
-                                            <constraint firstAttribute="height" constant="90" id="zQb-LT-Cdx"/>
-                                        </constraints>
-                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Summary:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uC6-C4-WMa">
-                                        <rect key="frame" x="8" y="152" width="76" height="24"/>
+                                        <rect key="frame" x="8" y="180" width="76" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="jDG-72-jW0"/>
                                             <constraint firstAttribute="width" constant="76" id="mli-gN-IZb"/>
                                             <constraint firstAttribute="height" constant="24" id="zbJ-9Z-4Wk"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="13"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
@@ -87,7 +80,7 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FsQ-n8-7iv">
-                                        <rect key="frame" x="450" y="124" width="87" height="25"/>
+                                        <rect key="frame" x="8" y="147" width="87" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="FoK-cd-LY1"/>
                                             <constraint firstAttribute="width" constant="87" id="FtW-Kt-mdO"/>
@@ -101,59 +94,76 @@
                                             <action selector="openiBooks:" destination="Ybd-Ix-E5y" eventType="touchUpInside" id="xPO-KX-9XD"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-60-OTB">
-                                        <rect key="frame" x="105" y="38" width="395" height="31"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="395" placeholderIntrinsicHeight="31" text="Title" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p1v-60-OTB">
+                                        <rect key="frame" x="105" y="29" width="395" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="Xji-O6-GEn"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Xji-O6-GEn"/>
+                                            </mask>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Author" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hei-6C-4iY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="395" placeholderIntrinsicHeight="31" text="Author" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hei-6C-4iY">
                                         <rect key="frame" x="105" y="61" width="395" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="rN8-0s-BUh"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="14"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rN8-0s-BUh"/>
+                                            </mask>
+                                        </variation>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbP-GH-w7a">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="395" placeholderIntrinsicHeight="31" text="Category" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BbP-GH-w7a">
                                         <rect key="frame" x="105" y="85" width="395" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="atE-bZ-IgP"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="12"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="11"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMr-cu-nBO">
+                                        <rect key="frame" x="8" y="29" width="80" height="90"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="80" id="JbR-vn-YRn"/>
+                                            <constraint firstAttribute="height" constant="90" id="zQb-LT-Cdx"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="77C-X7-WD2" secondAttribute="bottom" constant="8" id="9oY-39-9Jy"/>
-                                    <constraint firstItem="uC6-C4-WMa" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="152" id="Ba6-aM-7Ia"/>
+                                    <constraint firstItem="uC6-C4-WMa" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="180" id="Ba6-aM-7Ia"/>
                                     <constraint firstItem="BbP-GH-w7a" firstAttribute="leading" secondItem="CMr-cu-nBO" secondAttribute="trailing" constant="17" id="FD3-FS-FGO"/>
                                     <constraint firstAttribute="trailing" secondItem="BbP-GH-w7a" secondAttribute="trailing" constant="60" id="JAh-ot-TBe"/>
                                     <constraint firstAttribute="trailing" secondItem="p1v-60-OTB" secondAttribute="trailing" constant="60" id="K2l-SM-9oa"/>
                                     <constraint firstAttribute="trailing" secondItem="77C-X7-WD2" secondAttribute="trailing" constant="8" id="LTW-4e-8W3"/>
-                                    <constraint firstItem="p1v-60-OTB" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="38" id="N4F-Wh-F72"/>
-                                    <constraint firstItem="FsQ-n8-7iv" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="124" id="NAP-X7-NhJ"/>
+                                    <constraint firstItem="p1v-60-OTB" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="29" id="N4F-Wh-F72"/>
+                                    <constraint firstItem="FsQ-n8-7iv" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="147" id="NAP-X7-NhJ"/>
                                     <constraint firstItem="Hei-6C-4iY" firstAttribute="leading" secondItem="CMr-cu-nBO" secondAttribute="trailing" constant="17" id="S7F-mc-4kf"/>
-                                    <constraint firstAttribute="trailing" secondItem="FsQ-n8-7iv" secondAttribute="trailing" constant="23" id="VVn-tV-ji4"/>
                                     <constraint firstItem="77C-X7-WD2" firstAttribute="leading" secondItem="SDx-0o-UFf" secondAttribute="leading" constant="8" id="XIm-sP-1rF"/>
                                     <constraint firstAttribute="trailing" secondItem="Hei-6C-4iY" secondAttribute="trailing" constant="60" id="aPd-UL-mGM"/>
-                                    <constraint firstItem="Hei-6C-4iY" firstAttribute="top" secondItem="p1v-60-OTB" secondAttribute="bottom" constant="-8" id="f9h-Jz-dPg"/>
+                                    <constraint firstItem="Hei-6C-4iY" firstAttribute="top" secondItem="p1v-60-OTB" secondAttribute="bottom" constant="1" id="f9h-Jz-dPg"/>
                                     <constraint firstItem="uC6-C4-WMa" firstAttribute="leading" secondItem="SDx-0o-UFf" secondAttribute="leading" constant="8" id="hoG-9z-aFu"/>
-                                    <constraint firstItem="77C-X7-WD2" firstAttribute="top" secondItem="CMr-cu-nBO" secondAttribute="bottom" constant="77" id="hzd-Ad-Kn9"/>
+                                    <constraint firstItem="77C-X7-WD2" firstAttribute="top" secondItem="CMr-cu-nBO" secondAttribute="bottom" constant="86" id="hzd-Ad-Kn9"/>
                                     <constraint firstItem="p1v-60-OTB" firstAttribute="leading" secondItem="CMr-cu-nBO" secondAttribute="trailing" constant="17" id="jA7-ZC-aWh"/>
-                                    <constraint firstItem="CMr-cu-nBO" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="38" id="krr-2d-NEQ"/>
+                                    <constraint firstItem="CMr-cu-nBO" firstAttribute="top" secondItem="SDx-0o-UFf" secondAttribute="top" constant="29" id="krr-2d-NEQ"/>
                                     <constraint firstItem="CMr-cu-nBO" firstAttribute="leading" secondItem="SDx-0o-UFf" secondAttribute="leading" constant="8" id="mAW-qT-H5U"/>
                                     <constraint firstItem="BbP-GH-w7a" firstAttribute="top" secondItem="Hei-6C-4iY" secondAttribute="bottom" constant="-7" id="oEc-d1-Udl"/>
+                                    <constraint firstItem="FsQ-n8-7iv" firstAttribute="leading" secondItem="SDx-0o-UFf" secondAttribute="leading" constant="8" id="wlj-zt-46S"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="SDx-0o-UFf" secondAttribute="centerY" constant="-22" id="6ho-De-o5M"/>
                             <constraint firstItem="1Gm-eH-2GG" firstAttribute="leading" secondItem="U0i-ht-HWt" secondAttribute="leading" id="7QE-x7-7oE"/>
